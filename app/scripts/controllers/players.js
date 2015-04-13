@@ -8,8 +8,8 @@
  * Controller of the homeVisitMCApp
  */
 angular.module('homeVisitMCApp')
-    .controller('PlayersCtrl', function ($scope, Status) {
-        //$scope.socket = Socket;
+    .controller('PlayersCtrl', function ($scope, Status, Socket) {
+        $scope.socket = Socket;
         $scope.status = Status;
 
         
@@ -30,4 +30,14 @@ angular.module('homeVisitMCApp')
         //    var players = $scope.status.otherPlayers.filter(function(p){return p.joined;});
         //    return players;
         //};
+        
+        $scope.playback = function(cmd, param) {
+            console.log("play clicked");
+            Socket.emit({type:"playbackAction", data:cmd, param:param}, function() { console.log('play emitted'); });
+        };
+        $scope.alert = function() {
+            console.log("Alarm clicked");
+            Socket.emit({type:"alert"}, function() { console.log('Alarm emitted'); });
+        }
+
    });

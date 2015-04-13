@@ -5,4 +5,14 @@
         <ul class="list-group list-unstyled">
             <li class="list-group-item">{{player.name}}</li>
     </div>
+    
+    <div>
+        <button class="btn" ng-click="playback('restart')">RESTART</button>
+        <button class="btn" ng-click="playback('go','0')">GO</button>
+        <button class="btn" ng-click="playback('go','1')">GO 2</button>
+        <button class="btn" ng-click="playback('rego')">REGO</button>
+        <button class="btn" ng-click="playback('back')">BACK</button>
+        <button class="btn" ng-click="alert()">ALARM</button>
+    </div>
+    
 </div>
