@@ -1,1 +1,8 @@
-Hier kommt dann die Ansicht mit den Teams (players) hin....
+<div class="container-fluid">
+    {{status}}
+    <div class="player" ng-repeat="player in players track by $index"
+         ng-style="{'top':player.top, 'left':player.left, 'background':player.color}">
+        <ul class="list-group list-unstyled">
+            <li class="list-group-item">{{player.name}}</li>
+    </div>
+</div>

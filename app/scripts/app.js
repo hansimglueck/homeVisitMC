@@ -13,7 +13,9 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'WebsocketServices',
+    'playerAppServices'
   ])
   .config(function ($routeProvider) {
     $routeProvider
