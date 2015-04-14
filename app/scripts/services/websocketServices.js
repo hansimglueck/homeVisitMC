@@ -9,7 +9,8 @@ angular.module('WebsocketServices', []).
         var onMessageCallbacks;
         //TODO: switch by type cordova/webapp
         //var host = location.host;
-        var host = "home.visit.eu";
+        //var host = "home.visit.eu";
+        var host = "192.168.178.21:3000";
         onMessageCallbacks = [];
         var connected = false;
         var server = {connected: connected};
